@@ -1,0 +1,120 @@
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+.container{
+    width: 100%;
+    max-width: 540px;
+    max-height: 400px;
+    margin: 0 auto;
+    background-color: gray;
+    padding: 50px;
+    border-radius: 12px;
+    overflow:auto ;
+    overflow-wrap: break-word;
+   
+    
+}
+h1{ text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+    color: gray;
+    
+}
+.caderno{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    
+   
+}
+#inputTarefa{
+ width: 395px;
+ padding: 15px;
+ border-radius: 12px;
+ border: 1px solid rgb(19, 19, 19);
+ outline: none;
+ font-size: 1.2rem;
+ background-color: rgb(19, 18, 18);
+ color: white;
+ letter-spacing: 0.3px;
+}
+.caderno button{
+    width: 45px;
+    height: 45px;
+    margin-top: 5px;
+    border-radius: 50px;
+    border: 1px solid rgb(19, 19, 19);
+    background-color: rgb(19, 18, 18);
+    color: white;
+    outline: none;
+    font-size: 20px;
+   
+
+}
+.X:hover{
+    background-color: rgb(231, 0, 0);
+    color: black;
+    cursor: pointer;
+}
+.add:hover{
+    background-color: green;
+    color: black;
+    cursor: pointer;
+}
+
+#listaTarefas{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+#listaTarefas li{
+    padding: 10px;
+    background-color: rgb(19, 18, 18);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.2rem;  
+}
+
+.textoTarefa {
+    /* width: 0px; */
+    white-space: nowrap;
+    /* width: 12em; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.3px;
+}
+.btnacaoEx{
+    width: 38px;
+    height: 38px;
+    margin-left: 8px;
+    border-radius: 20px;
+    border: 1px solid rgb(19, 18, 18);
+    background-color: rgb(37, 34, 34);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    padding-bottom: 5px;
+    
+
+}
+
+    
+
+.btnacaoEx:hover{
+    background-color: red;
+    color: black;
+}
+
+#tarefas{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(19, 18, 18);
+}
