@@ -4,14 +4,17 @@ body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .container{
-    width: 100%;
-    max-width: 540px;
-    max-height: 400px;
+    
+    max-width:510px;
+    min-width: 200px;
     margin: 0 auto;
+    
     background-color: gray;
-    padding: 50px;
+    padding: 45px;
     border-radius: 12px;
     overflow:auto ;
     overflow-wrap: break-word;
@@ -32,36 +35,46 @@ h1{ text-align: center;
    
 }
 #inputTarefa{
- width: 395px;
- padding: 15px;
- border-radius: 12px;
- border: 1px solid rgb(19, 19, 19);
- outline: none;
- font-size: 1.2rem;
- background-color: rgb(19, 18, 18);
- color: white;
- letter-spacing: 0.3px;
-}
+
+     width: -webkit-fill-available;
+     padding: 15px;
+     border-radius: 12px;
+     border: 1px solid rgb(19, 19, 19);
+     outline: none;
+     font-size: 1.2rem;
+     background-color: rgb(19, 18, 18);
+     color: white;
+     
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     letter-spacing: 0.3px;
+ }
+
 .caderno button{
     width: 45px;
     height: 45px;
     margin-top: 5px;
+    margin-left: 10px;
     border-radius: 50px;
     border: 1px solid rgb(19, 19, 19);
     background-color: rgb(19, 18, 18);
     color: white;
     outline: none;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
    
 
 }
 .X:hover{
-    background-color: rgb(231, 0, 0);
+    background-color: rgb(247, 2, 2);
     color: black;
     cursor: pointer;
 }
 .add:hover{
-    background-color: green;
+    background-color: rgb(0, 214, 0);
     color: black;
     cursor: pointer;
 }
@@ -73,25 +86,29 @@ h1{ text-align: center;
     
 }
 #listaTarefas li{
-    padding: 10px;
     background-color: rgb(19, 18, 18);
     border-radius: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    font-size: 1.2rem;  
+    font-size: 1.3rem; 
+    padding-right: 15px; 
 }
 
 .textoTarefa {
-    /* width: 0px; */
+    display: flex;
+    align-items: center;
     white-space: nowrap;
-    /* width: 12em; */
     overflow: hidden;
     text-overflow: ellipsis;
     letter-spacing: 0.3px;
+    height: 60px;
+    padding-left: 15px;
+    width: -webkit-fill-available;
+    
 }
-.btnacaoEx{
+.btnacaoEd , .btnacaoEx{
     width: 38px;
     height: 38px;
     margin-left: 8px;
@@ -103,13 +120,31 @@ h1{ text-align: center;
     font-size: 20px;
     padding-bottom: 5px;
     
-
+    
+    
+    
+}
+.divBtn{
+    display: flex;
+    justify-content: right;
+    
+   
+}
+.btnacaoEd::before{
+    content: '✎';
+}
+.btnacaoEx::before{
+    content: '✖';
 }
 
-    
-
 .btnacaoEx:hover{
-    background-color: red;
+    background-color: rgb(247, 2, 2);
+    color: black;
+}
+
+
+.btnacaoEd:hover{
+    background-color: rgb(194, 194, 0);
     color: black;
 }
 
@@ -117,4 +152,123 @@ h1{ text-align: center;
     text-align: center;
     font-size: 30px;
     color: rgb(19, 18, 18);
+}
+
+
+#editar{
+    max-width: 400px;
+    min-width: 320;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    
+    padding: 15px;
+    background-color:gray;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 200;
+  
+}
+
+#inputEditar{
+    width: 320px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgb(19, 19, 19);
+    outline: none;
+    font-size: 1.2rem;
+    background-color: rgb(19, 18, 18);
+    color: white;
+    letter-spacing: 0.3px;
+    
+}
+
+#editar button{
+   width: 100px;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-top: 15px;
+   padding: 8px;
+   border-radius: 10px;
+   border: 1px solid rgb(19, 18, 18);
+   background-color: rgb(19, 18, 18);
+   color: white;
+    font-size: 16px;
+}
+
+
+#btnCancelarEd:hover{
+    background-color: rgb(247, 2, 2);
+    color: black;
+    cursor: pointer;
+}
+#btnSalverEd:hover{
+    background-color: rgb(0, 214, 0);
+    color: black;
+    cursor: pointer;
+}
+
+#Ids{
+    display: inline-block;
+    padding: 8px;
+    text-align: left;
+    color: gray;
+    background-color: rgb(19, 18, 18);
+    border-radius: 8px;
+    float: left;
+}
+   
+#fundo{
+    position: fixed;
+    background-color: black;
+    opacity: 0.9;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.abrir{
+    display : block !important ; 
+}
+
+
+.checked{
+    background-color: rgb(0, 92, 0) !important;
+    opacity: 0.7;
+}
+
+
+@media screen and (max-width: 540px) {
+    .container{
+        padding: 15px;
+        padding-top: 30PX;
+        padding-bottom: 20PX;
+    }
+   
+    .btnacaoEx{
+        background-color: rgb(247, 2, 2);
+        color: black;
+    }
+    
+    
+    .btnacaoEd{
+        background-color: rgb(194, 194, 0);
+        color: black;
+    }
+    
+    .X{
+        background-color: rgb(247, 2, 2)!important;
+        color: black!important;
+        
+    }
+    .add{
+        background-color: rgb(0, 194, 0) !important;
+        color: black !important;
+        
+    }
 }

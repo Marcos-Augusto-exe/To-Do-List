@@ -6,24 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Tarefas</title>
+    <link rel="icon" href="./img/icon-list.png">
+    <title>TO-DO LIST</title>
 </head>
 
 <body>
     <h1>TO-DO LIST</h1>
     <div class="container">
-        
-        <div class="caderno">
-            <input type="text" id="inputTarefa" placeholder="Adicione uma nova tarefa" >
-            <button class="add" id="btnAddTarefa">+</button>
-            <button class="X" id="btnExtTarefa">X</button>
 
+        <div class="caderno">
+            <input type="text" id="inputTarefa" placeholder=" Nova tarefa...">
+            <div class="divBtn">
+                <button class="add" id="btnAddTarefa">+</button>
+                <button class="X" id="btnExtTarefa">✖</button>
+            </div>
         </div>
         <h2 id="tarefas"></h2>
         <ul id="listaTarefas">
-          
-              
+
+
         </ul>
+    </div>
+
+
+
+    <div id="editar" class="editar">
+        <h2 id="Ids"></h2>
+        <input type="text" id="inputEditar" placeholder="Editar tarefa">
+        <button id="btnSalverEd">Salvar</button>
+        <button id="btnCancelarEd">Cancelar</button>
+
+    </div>
+
+    <div id="fundo">
     </div>
 
 
