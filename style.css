@@ -36,7 +36,7 @@ h1{ text-align: center;
 }
 #inputTarefa{
 
-     width: -webkit-fill-available;
+     width:100%;
      padding: 15px;
      border-radius: 12px;
      border: 1px solid rgb(19, 19, 19);
@@ -97,15 +97,15 @@ h1{ text-align: center;
 }
 
 .textoTarefa {
-    display: flex;
-    align-items: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     letter-spacing: 0.3px;
     height: 60px;
     padding-left: 15px;
-    width: -webkit-fill-available;
+    width:100%;
+    position: relative;
+    line-height: 60px;
     
 }
 .btnacaoEd , .btnacaoEx{
@@ -270,5 +270,20 @@ h1{ text-align: center;
         background-color: rgb(0, 194, 0) !important;
         color: black !important;
         
+    }
+    h1{
+        font-size: 10vw;
+        margin-top: 20px;
+    }
+
+    #btnCancelarEd{
+        background-color: rgb(247, 2, 2)!important;
+        color: black!important;
+        cursor: pointer;
+    }
+    #btnSalverEd{
+        background-color: rgb(0, 214, 0)!important;
+        color: black!important;
+        cursor: pointer;
     }
 }
